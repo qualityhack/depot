@@ -1846,3 +1846,763 @@ Processing ProductsController#create (for 127.0.0.1 at 2009-12-27 16:43:34) [POS
 Rendering template within layouts/products
 Rendering products/new
 Completed in 266ms (View: 153, DB: 74) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 16:48:38) [GET]
+Rendering store/index
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://localhost/store]
+  [4;35;1mSQL (0.7ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 17:23:14) [GET]
+  [4;36;1mProduct Load (117.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering store/index
+Completed in 277ms (View: 152, DB: 120) | 200 OK [http://localhost/store]
+  [4;35;1mSQL (0.7ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-27 17:23:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/svn.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-27 17:23:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/svn.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-12-27 17:24:39) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 306ms (View: 273, DB: 1) | 200 OK [http://localhost/products/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-12-27 17:27:42) [GET]
+  [4;35;1mProduct Load (2.8ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 60ms (View: 46, DB: 4) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-27 17:27:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/svn.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-12-27 17:28:42) [GET]
+  [4;36;1mProduct Load (2.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+
+ActionView::TemplateError (undefined method `image_taq' for #<ActionView::Base:0x7fbddbb0a1d0>) on line #7 of app/views/products/index.html.erb:
+4:   <% for product in @products %>
+5:     <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+6:        <td>
+7:          <%= image_taq product.image_url, :class => 'list-image' %>
+8:        </td>
+9:        <td class="list-description">
+10:          <dl>
+
+    app/views/products/index.html.erb:7
+    app/views/products/index.html.erb:4:in `each'
+    app/views/products/index.html.erb:4
+    app/controllers/products_controller.rb:7:in `index'
+
+Rendered rescues/_trace (60.7ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-12-27 17:28:58) [GET]
+  [4;36;1mProduct Load (2.8ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 32ms (View: 21, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-27 17:28:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/svn.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2009-12-27 17:29:04) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mProduct Load (2.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 5) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 172ms (View: 133, DB: 3) | 200 OK [http://localhost/products/5/edit]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2009-12-27 17:29:29) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc=", "id"=>"5", "product"=>{"price"=>"28.50", "image_url"=>"/images/svn.jpg", "title"=>"Pragmatic Version Control", "description"=>"<p>\r\n      This book is a recipe-based approach to using Subversion\r\n      That will get you up and running quickly---and correctly. All\r\n      projects need version control: it's a foundational piece of any\r\n      project's infrastructure. Yet half of all project teams in the U.S.\r\n      don't use any version control at all. Many other don't use it well, and end\r\n      up experiencing time-consuming porblems.\r\n      </p>\r\n      "}}
+  [4;35;1mProduct Load (1.9ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 5) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Load (1.5ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = E'Pragmatic Version Control' AND "products".id <> 5) LIMIT 1[0m
+  [4;36;1mProduct Update (31.4ms)[0m   [0;1mUPDATE "products" SET "updated_at" = '2009-12-27 23:29:29.252769', "image_url" = E'/images/svn.jpg', "description" = E'<p>
+ This book is a recipe-based approach to using Subversion
+ That will get you up and running quickly---and correctly. All
+ projects need version control: it''s a foundational piece of any
+ project''s infrastructure. Yet half of all project teams in the U.S.
+ don''t use any version control at all. Many other don''t use it well, and end
+ up experiencing time-consuming porblems.
+ </p>
+ ' WHERE "id" = 5[0m
+  [4;35;1mSQL (122.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/products/5
+Completed in 205ms (DB: 160) | 302 Found [http://localhost/products/5]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2009-12-27 17:29:29) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mProduct Load (1.9ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 5) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 67ms (View: 50, DB: 3) | 200 OK [http://localhost/products/5]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-12-27 17:29:32) [GET]
+  [4;35;1mProduct Load (2.3ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 26ms (View: 16, DB: 3) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 17:29:44) [GET]
+  [4;35;1mProduct Load (3.6ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering store/index
+Completed in 20ms (View: 8, DB: 12) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 17:30:56) [GET]
+  [4;35;1mProduct Load (3.3ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering store/index
+Completed in 110ms (View: 15, DB: 5) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 17:31:00) [GET]
+  [4;35;1mProduct Load (3.1ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering store/index
+Completed in 20ms (View: 9, DB: 4) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 17:31:07) [GET]
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering store/index
+Completed in 25ms (View: 14, DB: 4) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 17:31:26) [GET]
+  [4;35;1mProduct Load (3.2ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering store/index
+Completed in 25ms (View: 14, DB: 4) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 17:59:59) [GET]
+  [4;35;1mProduct Load (67.1ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 334ms (View: 237, DB: 69) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:00:02) [GET]
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 22ms (View: 11, DB: 4) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:00:03) [GET]
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 21ms (View: 10, DB: 4) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:00:04) [GET]
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 20ms (View: 9, DB: 4) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:00:05) [GET]
+  [4;35;1mProduct Load (3.4ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 22ms (View: 10, DB: 5) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:01:12) [GET]
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 44ms (View: 10, DB: 4) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:01:13) [GET]
+  [4;35;1mProduct Load (3.5ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 123ms (View: 10, DB: 5) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:01:13) [GET]
+  [4;35;1mProduct Load (3.4ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 23ms (View: 11, DB: 6) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:01:13) [GET]
+  [4;35;1mProduct Load (85.1ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 103ms (View: 10, DB: 87) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:01:14) [GET]
+  [4;35;1mProduct Load (3.4ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 21ms (View: 10, DB: 5) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:01:14) [GET]
+  [4;35;1mProduct Load (3.6ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 21ms (View: 9, DB: 5) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:01:14) [GET]
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 20ms (View: 9, DB: 5) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:01:15) [GET]
+  [4;35;1mProduct Load (3.1ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 21ms (View: 10, DB: 4) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:03:01) [GET]
+  [4;35;1mProduct Load (3.1ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 29ms (View: 18, DB: 4) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:25:44) [GET]
+  [4;35;1mProduct Load (97.4ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 289ms (View: 183, DB: 99) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:25:47) [GET]
+  [4;35;1mProduct Load (6.9ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 75ms (View: 36, DB: 8) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (10.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:35:28) [GET]
+  [4;35;1mProduct Load (49.1ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 587ms (View: 126, DB: 60) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:35:33) [POST]
+  Parameters: {"authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc="}
+  [4;35;1mProduct Load (3.1ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 41ms (View: 29, DB: 5) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:35:34) [POST]
+  Parameters: {"authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc="}
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 25ms (View: 14, DB: 4) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:35:35) [POST]
+  Parameters: {"authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc="}
+  [4;35;1mProduct Load (4.9ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 30ms (View: 16, DB: 7) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:35:35) [POST]
+  Parameters: {"authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc="}
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 26ms (View: 14, DB: 5) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (20.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:36:55) [POST]
+  Parameters: {"authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc="}
+  [4;35;1mProduct Load (3.1ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 49ms (View: 36, DB: 24) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:43:01) [POST]
+  Parameters: {"authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc="}
+  [4;35;1mProduct Load (69.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 408ms (View: 223, DB: 71) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (3.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:44:55) [POST]
+  Parameters: {"authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc="}
+  [4;35;1mProduct Load (3.5ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 88ms (View: 60, DB: 8) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (15.7ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:46:39) [POST]
+  Parameters: {"authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc="}
+  [4;35;1mProduct Load (48.4ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 186ms (View: 110, DB: 65) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 18:46:43) [POST]
+  Parameters: {"authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc="}
+  [4;35;1mProduct Load (9.4ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 594ms (View: 547, DB: 11) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (7.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20091227153155)
+Migrating to AddPriceToProduct (20091227154231)
+Migrating to AddTestData (20091227205408)
+Migrating to AddP (20091227213305)
+Migrating to CreateSessions (20091228005557)
+  [4;36;1mSQL (22.9ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1008.6ms)[0m   [0mCREATE TABLE "sessions" ("id" serial primary key, "session_id" character varying(255) NOT NULL, "data" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [4;36;1mSQL (41.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091228005557')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (5.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/packo/depot/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 19:29:50) [POST]
+  Parameters: {"authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc="}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (42.8ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (unprocessable_entity)
+/!\ FAILSAFE /!\  Sun Dec 27 19:29:50 -0600 2009
+  Status: 500 Internal Server Error
+  RuntimeError: ERROR	C22001	Mvalue too long for type character varying(255)	Fvarchar.c	L595	Rvarchar: INSERT INTO "sessions" ("data", "created_at", "updated_at", "session_id") VALUES(E'BAh7BjoQX2NzcmZfdG9rZW4iMU9Wc3RxOURkRFU1ajhRMmRSZThicHBRcW5W
+a25RcDNucmdQUFJNcEJXVUU9
+', '2009-12-28 01:29:50.452162', '2009-12-28 01:29:50.452162', E'BAh7CDoQX2NzcmZfdG9rZW4iMXZsUTlYa1o4N2FoRVZkM2plZ2hiY1crczJFQUZYNDhyTlduWE0xN0xhVmM9IgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg9zZXNzaW9uX2lkIiUwZGEzZWU1YjM5NmU5NjljNDE5YTYxNzIxNzAzODc4Ng==--f4a9129a0a6159075d772de9079ac8c3c18b9695') RETURNING "id"
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract_adapter.rb:219:in `log'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:550:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:1037:in `select_raw'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:1024:in `select'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:81:in `cache_sql'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/database_statements.rb:13:in `select_one'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/database_statements.rb:19:in `select_value'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:490:in `insert'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2901:in `create_without_timestamps'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/timestamp.rb:53:in `create_without_callbacks'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/callbacks.rb:266:in `create'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2867:in `create_or_update_without_callbacks'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/callbacks.rb:250:in `create_or_update'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2538:in `save_without_validation'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/validations.rb:1078:in `save_without_dirty'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/dirty.rb:79:in `save_without_transactions'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:229:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:229:in `with_transaction_returning_status'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/database_statements.rb:136:in `transaction'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:182:in `transaction'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:228:in `with_transaction_returning_status'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:196:in `save'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:208:in `rollback_active_record_state!'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:196:in `save'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/session_store.rb:300:in `set_session'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:1448:in `silence'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/session_store.rb:297:in `set_session'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/abstract_store.rb:132:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 20:27:45) [POST]
+  Parameters: {"authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc="}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (91.3ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (unprocessable_entity)
+/!\ FAILSAFE /!\  Sun Dec 27 20:27:46 -0600 2009
+  Status: 500 Internal Server Error
+  RuntimeError: ERROR	C22001	Mvalue too long for type character varying(255)	Fvarchar.c	L595	Rvarchar: INSERT INTO "sessions" ("data", "created_at", "updated_at", "session_id") VALUES(E'BAh7BjoQX2NzcmZfdG9rZW4iMXZDaEZsQ3BHN2RUdDlnYytheTRUdjc2eVh6
+QkdqU2Q0SFR5aElybnJ2Tk09
+', '2009-12-28 02:27:46.491124', '2009-12-28 02:27:46.491124', E'BAh7CDoQX2NzcmZfdG9rZW4iMXZsUTlYa1o4N2FoRVZkM2plZ2hiY1crczJFQUZYNDhyTlduWE0xN0xhVmM9IgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg9zZXNzaW9uX2lkIiUwZGEzZWU1YjM5NmU5NjljNDE5YTYxNzIxNzAzODc4Ng==--f4a9129a0a6159075d772de9079ac8c3c18b9695') RETURNING "id"
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract_adapter.rb:219:in `log'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:550:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:1037:in `select_raw'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:1024:in `select'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:81:in `cache_sql'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/database_statements.rb:13:in `select_one'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/database_statements.rb:19:in `select_value'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:490:in `insert'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2901:in `create_without_timestamps'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/timestamp.rb:53:in `create_without_callbacks'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/callbacks.rb:266:in `create'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2867:in `create_or_update_without_callbacks'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/callbacks.rb:250:in `create_or_update'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2538:in `save_without_validation'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/validations.rb:1078:in `save_without_dirty'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/dirty.rb:79:in `save_without_transactions'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:229:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:229:in `with_transaction_returning_status'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/database_statements.rb:136:in `transaction'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:182:in `transaction'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:228:in `with_transaction_returning_status'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:196:in `save'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:208:in `rollback_active_record_state!'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:196:in `save'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/session_store.rb:300:in `set_session'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:1448:in `silence'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/session_store.rb:297:in `set_session'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/abstract_store.rb:132:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+
+
+Processing StoreController#index (for 127.0.0.1 at 2009-12-27 20:28:48) [POST]
+  Parameters: {"authenticity_token"=>"vlQ9XkZ87ahEVd3jeghbcW+s2EAFX48rNWnXM17LaVc="}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (90.8ms)
+Rendered rescues/_request_and_response (3.7ms)
+Rendering rescues/layout (unprocessable_entity)
+/!\ FAILSAFE /!\  Sun Dec 27 20:28:49 -0600 2009
+  Status: 500 Internal Server Error
+  RuntimeError: ERROR	C22001	Mvalue too long for type character varying(255)	Fvarchar.c	L595	Rvarchar: INSERT INTO "sessions" ("data", "created_at", "updated_at", "session_id") VALUES(E'BAh7BjoQX2NzcmZfdG9rZW4iMSs5MzNWcUNPam1MM3ZwaUlpd0ZtaVFSck5T
+NzBwRjVQY3paMXBBenorc0k9
+', '2009-12-28 02:28:49.224295', '2009-12-28 02:28:49.224295', E'BAh7CDoQX2NzcmZfdG9rZW4iMXZsUTlYa1o4N2FoRVZkM2plZ2hiY1crczJFQUZYNDhyTlduWE0xN0xhVmM9IgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg9zZXNzaW9uX2lkIiUwZGEzZWU1YjM5NmU5NjljNDE5YTYxNzIxNzAzODc4Ng==--f4a9129a0a6159075d772de9079ac8c3c18b9695') RETURNING "id"
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract_adapter.rb:219:in `log'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:550:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:1037:in `select_raw'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:1024:in `select'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:81:in `cache_sql'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/database_statements.rb:13:in `select_one'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/database_statements.rb:19:in `select_value'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:490:in `insert'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2901:in `create_without_timestamps'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/timestamp.rb:53:in `create_without_callbacks'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/callbacks.rb:266:in `create'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2867:in `create_or_update_without_callbacks'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/callbacks.rb:250:in `create_or_update'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2538:in `save_without_validation'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/validations.rb:1078:in `save_without_dirty'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/dirty.rb:79:in `save_without_transactions'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:229:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:229:in `with_transaction_returning_status'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/database_statements.rb:136:in `transaction'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:182:in `transaction'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:228:in `with_transaction_returning_status'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:196:in `save'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:208:in `rollback_active_record_state!'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/transactions.rb:196:in `save'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/session_store.rb:300:in `set_session'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:1448:in `silence'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/session_store.rb:297:in `set_session'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/abstract_store.rb:132:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
